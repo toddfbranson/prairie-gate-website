@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recent Work | Todd Branson</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+:root{
+    --prairie-green:#294436;
+    --warm-copper:#b97846;
+    --sandstone:#f5f0e8;
+    --text:#333333;
+    --white:#ffffff;
+	--dark-sandstone:#d6c2a1;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--text);
+    background:var(--sandstone);
+    line-height:1.7;
+}
+
+.hero{
+    background:var(--prairie-green);
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+}
+
+.section{
+    max-width:1200px;
+    margin:0 auto;
+    padding:70px 20px;
+}
+
+	.section2{
+    background:var(--dark-sandstone);
+	max-width:1200px;
+    margin:0 auto;
+    padding:70px 20px;
+}
+
+.section-title{
+    color:var(--prairie-green);
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.section-intro{
+    color:#666;
+    margin-bottom:40px;
+}
+
+.work-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+	
+	/* Buttons */
+	
+	.btn {
+    display:grid;
+    padding:7px 14px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary {
+    background:var(--warm-copper);
+    color:white;
+}
+
+.btn-secondary {
+    border:2px solid white;
+    color:white;
+}
+
+	.btn-external {
+    border:2px solid #B87333;
+    color:white;
+	
+}
+	.btn-wrapper {
+		display:flex;
+		gap: 40px;
+		align-items:flex-start;
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+	.caption-wrapper {
+		display:flex;
+		flex-direction:column;
+		align-content: flex-start;
+	}
+	.btn-caption {
+		/*text-align:center;*/
+		margin-top:2px;
+		font-size:0.7rem;
+		color:var(--ivory);
+		font-style: italic;
+	}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    margin-top:0;
+    color:var(--prairie-green);
+}
+
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:0px;
+}
+
+.gallery img{
+    width:80%;
+    border-radius:5px;
+}
+
+	.gallery2{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(80px,1fr));
+    gap:0px;
+}
+
+.gallery2 img{
+    width:60%;
+    border-radius:5px;
+}
+
+	
+	
+	
+footer{
+    background:var(--prairie-green);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+    <h1>Recent Work</h1>
+    <p>
+        Marketing, communications, branding, web development, graphic design,
+        video production, livestreaming, and nonprofit leadership support.
+    </p>
+</header>
+
+<section class="section">
+    <h2 class="section-title">Websites</h2>
+    <p class="section-intro">
+        Software used: Square, Airtable, Softr, Prezi
+    </p>
+<div class="btn-wrapper">
+   
+        <a href="https://4henrichment.softr.app/" target="_blank" class="btn btn-primary">4-H School Enrichment</a>
+        <a href="https://canadian-county-4h.square.site/" target="_blank" class="btn btn-primary">Canadian County 4-H Foundation</a>
+        <a href="http://winnerscirclefoundation.org/" target="_blank" class="btn btn-primary">Winners Circle Foundation</a>
+        <a href="https://prezi.com/j7qrk963thxk/" target="_blank" class="btn btn-primary">Prezi Presentation for AQHA</a>
+
+	</div>
+</section>
+
+<section class="section2">
+    <h2 class="section-title">Fact Sheets &amp; Flyers</h2>
+    <p class="section-intro">
+        Designed and produced with Adobe Illustrator, images edited in Adobe Photoshop.
+    </p>
+
+    <div class="gallery">
+        <img src="portfolio/flyer-1.jpg" alt="">
+        <img src="portfolio/flyer-2.jpg" alt="">
+        <img src="portfolio/flyer-3.jpg" alt="">
+        <img src="portfolio/flyer-4.jpg" alt="">
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Brochures &amp; Posters</h2>
+
+    <div class="gallery">
+		<div class="caption-wrapper"><img src="portfolio/brochure-1.jpg" alt=""><span class="btn-caption">Front and back of donor ask form.</span></div>
+        <div class="caption-wrapper"><img src="portfolio/brochure-2.jpg" alt=""><span class="btn-caption">General Information Flyer with Donor Ask.</span></div>
+        <div class="caption-wrapper"><img src="portfolio/poster-1.jpg" alt=""><span class="btn-caption">Poster Promoting Youth Engagement and Scholarships</span></div>
+        <div class="caption-wrapper"><img src="portfolio/poster-2.jpg" alt=""><span class="btn-caption">Window Poster Promoting Event</span></div>
+	</div>
+		 <div class="gallery2">
+		 <div class="caption-wrapper"><img src="portfolio/postcard-1.png" alt=""><span class="btn-caption">Fundraiser Invitation</span></div>
+		 <div class="caption-wrapper"><img src="portfolio/postcard-2.png" alt=""><span class="btn-caption">Youth Membership postcard themed with Stranger Things</span></div>
+
+    </div>
+</section>
+
+<section class="section2">
+    <h2 class="section-title">Signage &amp; Displays</h2>
+
+    <div class="work-grid">
+
+        <div class="card">
+            <div class="card-content">
+				<h3>Standing Signs</h3>
+				</div>
+			<div class="caption-wrapper"><img src="portfolio/standing-sign.jpg" alt=""><span class="btn-caption">Large Display for Easel or Wall Mount</span></div>
+                           
+            
+        </div>
+
+        <div class="card">
+           <div class="card-content">
+                 <h3>Pop-Up Banners</h3>
+            </div>
+			<div class="caption-wrapper"><img src="portfolio/pop-up-banner.jpg" alt=""><span class="btn-caption">Retractable pop-up Displays</span></div>
+            
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Museum Display</h3>
+            </div>
+			<div class="caption-wrapper"><img src="portfolio/museum-display-1.jpg" alt=""><span class="btn-caption">Wall-mounted Museum Displays</span></div>
+            
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Advertising</h2>
+
+    <div class="gallery">
+        <img src="portfolio/advertising-1.jpg" alt="">
+        <img src="portfolio/advertising-2.jpg" alt="">
+        <img src="portfolio/advertising-3.jpg" alt="">
+	</div>
+	<div class="gallery">
+		<img src="portfolio/advertising-4.jpg" alt="">
+		<img src="portfolio/advertising-5.jpg" alt="">
+		<img src="portfolio/advertising-6.jpg" alt="">
+    </div>
+</section>
+
+<section class="section2">
+    <h2 class="section-title">Themes</h2>
+
+    <div class="gallery">
+        <img src="portfolio/theme-1.png" alt="">
+        <img src="portfolio/theme-2.png" alt="">
+        <img src="portfolio/theme-3.jpg" alt="">
+	</div>
+	<div class="gallery2">
+		<img src="portfolio/theme-4.jpg" alt="">
+		<img src="portfolio/theme-5.jpg" alt="">
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Logos</h2>
+
+    <div class="work-grid">
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Anniversary Mark</h3>
+            </div>
+			<img src="portfolio/logo-anniversary.jpg" alt="">
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Event Logo</h3>
+            </div>
+			<img src="portfolio/logo-event.jpg" alt="">
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Nonprofit Logo</h3>
+            </div>
+			<img src="portfolio/logo-nonprofit.jpg" alt="">        
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Video Production Samples</h2>
+
+    <div class="links-list">
+        <a href="https://www.youtube.com/watch?v=2EgeouyUx2E" target="_blank">2021 Canadian County 4-H Year in Review</a>
+        <a href="https://www.youtube.com/watch?v=xWOnPieZtlg" target="_blank">Canadian County Junior Livestock Show Celebrates 50 Years</a>
+        <a href="https://www.youtube.com/watch?v=8SWPt5Qd9Q8" target="_blank">2023 Canadian County Herdsmanship Team</a>
+        <a href="https://www.youtube.com/watch?v=Im8W4cd7-cY" target="_blank">2024 Canadian County Herdsmanship Ambassador Team</a>
+        <a href="https://www.youtube.com/watch?v=kDzerpKhIQs" target="_blank">2026 United We Show</a>
+        <a href="https://www.youtube.com/watch?v=0HEQVEHkfro" target="_blank">2026 Herdsmanship Ambassador Team</a>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Livestream Samples</h2>
+
+    <div class="links-list">
+        <a href="https://www.youtube.com/watch?v=9Qe6arwsOQ0" target="_blank">
+            2026 Canadian County Junior Livestock Cattle Show
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=TJ7wteZVpS0" target="_blank">
+            2026 Canadian County Free Fair 4-H Goat, Sheep and Swine Show
+        </a>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">About Todd Branson</h2>
+
+    <p>
+        Organizational Marketing Leader with extensive experience in program and
+        product development, implementation and management. Highly skilled in
+        internal and external communications strategy, digital marketing,
+        branding, nonprofit leadership, social media, website development, and
+        revenue growth initiatives.
+    </p>
+
+    <p>
+        Certified by the Oklahoma Center for Nonprofits Management Program.
+    </p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Todd Branson. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
