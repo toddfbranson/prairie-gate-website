@@ -375,6 +375,7 @@ body {
     color: var(--charcoal);
     line-height: 1.6;
     background:#fff;
+	margin: 0;
 }
 
 .container {
@@ -392,7 +393,7 @@ h1,h2,h3 {
 		color: var(--charcoal);
 	}
 .btn {
-    display:grid;
+    display:flex;
     padding:7px 14px;
     border-radius:6px;
     text-decoration:none;
@@ -413,7 +414,8 @@ h1,h2,h3 {
 
 	.btn-external {
     border:2px solid #B87333;
-    color:white;
+    color:#B87333;
+	font-size:11px;
 	
 }
 	.btn-wrapper {
@@ -423,6 +425,8 @@ h1,h2,h3 {
 		width: fit-content;
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: 40px;
+		margin-bottom:40px;
 		
 	}
 	.caption-wrapper {
@@ -448,7 +452,6 @@ section {
 .section2{
     background:var(--dark-sandstone);
 	background-size: cover;
-	max-width:1200px;
     margin:0 auto;
     padding:70px 20px;
 }
@@ -649,7 +652,3 @@ footer {
 		color: var(--warm-copper);
 	}
 	
-	/*footer a:visited {
-		color: var(--charcoal);
-	}*/
-
