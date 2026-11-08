@@ -11,6 +11,28 @@
 	<link rel="android-chrome-icon" sizes="192x192" href="/android-chrome-192x192.png">
 	<link rel="Progressive-Web-App" sizes="512x512" href="/android-chrome-512x512.png">
 	<link rel="shortcut-icon" href="/favicon.ico">
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+
+    document.querySelectorAll("img").forEach(img => {
+        img.style.cursor = "zoom-in";
+
+        img.addEventListener("click", function() {
+            lightboxImg.src = this.src;
+            lightbox.style.display = "block";
+        });
+    });
+
+    lightbox.addEventListener("click", function() {
+        lightbox.style.display = "none";
+    });
+
+});
+</script>	
 </head>
 <body>
 
@@ -281,5 +303,8 @@ Todd is an association marketing and operations leader with 15+ years growing me
 </p>
 
 </footer>
+	<div class="lightbox" id="lightbox">
+    <img src="" alt="">
+</div>
 </body>
 </html>
