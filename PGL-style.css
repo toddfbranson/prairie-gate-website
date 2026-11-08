@@ -591,6 +591,7 @@ section {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
     gap:40px;
+	margin-top:40px;
 }
 
 .gallery img{
@@ -602,6 +603,7 @@ section {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(80px,1fr));
     gap:40px;
+	margin-top:40px;
 }
 
 .gallery2 img{
