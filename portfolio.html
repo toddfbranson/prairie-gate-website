@@ -24,23 +24,49 @@ body{
     background:var(--sandstone);
     line-height:1.7;
 }
-
-.hero{
-    background:var(--prairie-green);
-    color:white;
-    text-align:center;
-    padding:100px 20px;
-}
-
-.hero h1{
-    font-size:3rem;
-    margin-bottom:10px;
-}
-
-.hero p{
-    max-width:800px;
+	
+	.container {
+    width:min(1200px,90%);
     margin:auto;
 }
+	
+	h1 {
+    text-align: center;
+}
+
+h1,h2,h3 {
+    font-family: Arial, serif;
+}
+
+.hero {
+    background:
+        linear-gradient(rgba(31,75,58,.55),
+        rgba(31,75,58,.65)),
+        url("images/sunrise-prairie.png");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero-content {
+    max-width:700px;
+}
+
+.hero h1 {
+    font-size:4rem;
+    margin-bottom:20px;
+	align-items: center;
+}
+
+.hero p {
+    font-size:1.3rem;
+    margin-bottom:35px;
+	text-align: center;
+}
+
 
 .section{
     max-width:1200px;
@@ -57,13 +83,15 @@ body{
 
 .section-title{
     color:var(--prairie-green);
-    font-size:2rem;
-    margin-bottom:10px;
+    font-size:3rem;
+    margin-bottom:0px;
+	text-align: center;
 }
 
 .section-intro{
     color:#666;
-    margin-bottom:40px;
+    margin-bottom:20px;
+	text-align: center;
 }
 
 .work-grid{
@@ -75,12 +103,14 @@ body{
 	/* Buttons */
 	
 	.btn {
-    display:grid;
+    display:flex;
     padding:7px 14px;
     border-radius:6px;
     text-decoration:none;
     font-weight:600;
     transition:.3s;
+	margin: 20px;
+	justify-content: center;
 }
 
 .btn-primary {
@@ -95,7 +125,8 @@ body{
 
 	.btn-external {
     border:2px solid #B87333;
-    color:white;
+    color:var(--warm-copper);
+	font-size: 11px;
 	
 }
 	.btn-wrapper {
@@ -110,7 +141,7 @@ body{
 	.caption-wrapper {
 		display:flex;
 		flex-direction:column;
-		align-content: flex-start;
+		align-items: center;
 	}
 	.btn-caption {
 		/*text-align:center;*/
@@ -121,23 +152,44 @@ body{
 	}
 
 .card{
-    background:white;
+    display:flex;
+	flex-direction: column;
+	background:white;
     border-radius:12px;
+	align-items: center;
+	text-align:center;
     overflow:hidden;
     box-shadow:0 4px 12px rgba(0,0,0,.08);
+	margin:10px;
 }
 
 .card img{
-    width:100%;
-    display:block;
+    width:60%;
+	margin:20px;
 }
 
+	.card2{
+    display:flex;
+	flex-direction: column;
+	background:white;
+    border-radius:12px;
+	align-items: center;
+	text-align:center;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+	margin:10px;
+}
+
+.card2 img{
+    width:80%;
+	margin:10px;
+}
 .card-content{
-    padding:20px;
+    padding:10px;
 }
 
 .card h3{
-    margin-top:0;
+    padding:10px;
     color:var(--prairie-green);
 }
 
@@ -177,13 +229,20 @@ footer{
 </head>
 <body>
 
-<header class="hero">
+<section class="hero">
+	<div class="container hero-content">
     <h1>Recent Work</h1>
     <p>
-        Marketing, communications, branding, web development, graphic design,
-        video production, livestreaming, and nonprofit leadership support.
-    </p>
-</header>
+      Every poster, video, advertisement, display, and logo is our professional reflection of your organization's vision and passion.&nbsp;&nbsp; </p>
+	
+	
+	<div class="btn-wrapper">
+		<a href="index.html#contact" class="btn btn-primary">Schedule a Consultation</a>
+
+		<a href="index.html#services" class="btn btn-secondary">Explore Services</a>
+	</div>
+</div>
+		</section>
 
 <section class="section">
     <h2 class="section-title">Websites</h2>
@@ -194,6 +253,8 @@ footer{
    
         <a href="https://4henrichment.softr.app/" target="_blank" class="btn btn-primary">4-H School Enrichment</a>
         <a href="https://canadian-county-4h.square.site/" target="_blank" class="btn btn-primary">Canadian County 4-H Foundation</a>
+	</div>
+	<div class="btn-wrapper">
         <a href="http://winnerscirclefoundation.org/" target="_blank" class="btn btn-primary">Winners Circle Foundation</a>
         <a href="https://prezi.com/j7qrk963thxk/" target="_blank" class="btn btn-primary">Prezi Presentation for AQHA</a>
 
@@ -235,7 +296,7 @@ footer{
 
     <div class="work-grid">
 
-        <div class="card">
+        <div class="card2">
             <div class="card-content">
 				<h3>Standing Signs</h3>
 				</div>
@@ -244,7 +305,7 @@ footer{
             
         </div>
 
-        <div class="card">
+        <div class="card2">
            <div class="card-content">
                  <h3>Pop-Up Banners</h3>
             </div>
@@ -252,7 +313,7 @@ footer{
             
         </div>
 
-        <div class="card">
+        <div class="card2">
             <div class="card-content">
                 <h3>Museum Display</h3>
             </div>
@@ -280,21 +341,27 @@ footer{
 
 <section class="section2">
     <h2 class="section-title">Themes</h2>
+<p class="section-intro">
+        Designed and produced with Adobe Illustrator. Themes may include Adobe Stock to enhance the overall design.
+    </p>
+    <div class="work-grid">
 
-    <div class="gallery">
-        <img src="portfolio/theme-1.png" alt="">
-        <img src="portfolio/theme-2.png" alt="">
-        <img src="portfolio/theme-3.jpg" alt="">
+		<div class="card2"><img src="portfolio/theme-1.png" alt=""></div>
+		<div class="card2"><img src="portfolio/theme-2.png" alt=""></div>
+		<div class="card2"><img src="portfolio/theme-3.jpg" alt=""></div>
 	</div>
-	<div class="gallery2">
-		<img src="portfolio/theme-4.jpg" alt="">
-		<img src="portfolio/theme-5.jpg" alt="">
+	<div class="work-grid">
+
+		<div class="card2"><img src="portfolio/theme-4.jpg" alt=""></div>
+		<div class="card2"><img src="portfolio/theme-5.jpg" alt=""></div>
     </div>
 </section>
 
 <section class="section">
     <h2 class="section-title">Logos</h2>
-
+ <p class="section-intro">
+        Designed and produced with Adobe Illustrator. All logo are vector outlined and images are high res PNG placed in Illustrator artboards.
+    </p>
     <div class="work-grid">
 
         <div class="card">
@@ -319,30 +386,60 @@ footer{
         </div>
 
     </div>
-</section>
+	<div class="work-grid">
 
+        <div class="card">
+            <div class="card-content">
+                <h3>Livestock Show Mark</h3>
+            </div>
+			<img src="portfolio/logo-event-2.jpg" alt="">
+        </div>
+		<div class="card">
+            <div class="card-content">
+                <h3>Foundation Donor List Mark</h3>
+            </div>
+			<img src="portfolio/logo-nonprofit-2.jpg" alt="">
+        </div>
+		<div class="card">
+            <div class="card-content">
+                <h3>Country 4-H Club Identity Marks</h3>
+            </div>
+			<img src="portfolio/local-marks.jpg" alt="">
+        </div>
+	</div>
+</section>
+	
+	
 <section class="section">
     <h2 class="section-title">Video Production Samples</h2>
-
-    <div class="links-list">
-        <a href="https://www.youtube.com/watch?v=2EgeouyUx2E" target="_blank">2021 Canadian County 4-H Year in Review</a>
-        <a href="https://www.youtube.com/watch?v=xWOnPieZtlg" target="_blank">Canadian County Junior Livestock Show Celebrates 50 Years</a>
-        <a href="https://www.youtube.com/watch?v=8SWPt5Qd9Q8" target="_blank">2023 Canadian County Herdsmanship Team</a>
-        <a href="https://www.youtube.com/watch?v=Im8W4cd7-cY" target="_blank">2024 Canadian County Herdsmanship Ambassador Team</a>
-        <a href="https://www.youtube.com/watch?v=kDzerpKhIQs" target="_blank">2026 United We Show</a>
-        <a href="https://www.youtube.com/watch?v=0HEQVEHkfro" target="_blank">2026 Herdsmanship Ambassador Team</a>
+<p class="section-intro">
+        All videos listed below were created with Adobe Premiere and all content overlays were designed with Adobe Illustrator and Adobe Photoshop.
+    </p>
+    <div class="btn-wrapper">
+		
+        <a href="https://www.youtube.com/watch?v=2EgeouyUx2E" target="_blank"  class="btn btn-external">2021 Canadian County 4-H Year in Review</a>
+        <a href="https://www.youtube.com/watch?v=xWOnPieZtlg" target="_blank"  class="btn btn-external">Canadian County Junior Livestock Show Celebrates 50 Years</a>
+        <a href="https://www.youtube.com/watch?v=8SWPt5Qd9Q8" target="_blank"  class="btn btn-external">2023 Canadian County Herdsmanship Team</a>
+	</div>
+	<div class="btn-wrapper">
+        <a href="https://www.youtube.com/watch?v=Im8W4cd7-cY" target="_blank"  class="btn btn-external">2024 Canadian County Herdsmanship Ambassador Team</a>
+        <a href="https://www.youtube.com/watch?v=kDzerpKhIQs" target="_blank"  class="btn btn-external">2026 United We Show</a>
+        <a href="https://www.youtube.com/watch?v=0HEQVEHkfro" target="_blank"  class="btn btn-external">2026 Herdsmanship Ambassador Team</a>
     </div>
 </section>
 
 <section class="section">
-    <h2 class="section-title">Livestream Samples</h2>
+    <h2 class="section-title">YouTube Livestream Samples</h2>
+	 <p class="section-intro">
+        VMix used with two PTZ cameras on a dedicated Ethnernet Infrastructure. Ads and extra content overlays designed with Illustrator and imported into VMix template design manager.
+    </p>
 
-    <div class="links-list">
-        <a href="https://www.youtube.com/watch?v=9Qe6arwsOQ0" target="_blank">
+    <div class="btn-wrapper">
+        <a href="https://www.youtube.com/watch?v=9Qe6arwsOQ0" target="_blank" class="btn btn-external">
             2026 Canadian County Junior Livestock Cattle Show
         </a>
 
-        <a href="https://www.youtube.com/watch?v=TJ7wteZVpS0" target="_blank">
+        <a href="https://www.youtube.com/watch?v=TJ7wteZVpS0" target="_blank" class="btn btn-external">
             2026 Canadian County Free Fair 4-H Goat, Sheep and Swine Show
         </a>
     </div>
