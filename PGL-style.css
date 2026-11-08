@@ -359,6 +359,7 @@ fieldset {
     --sandstone: #DCC9A3;
     --ivory: #F8F6F2;
     --charcoal: #2B2B2B;
+	--dark-sandstone:#c09e59;
 }
 
 *,
@@ -397,6 +398,7 @@ h1,h2,h3 {
     text-decoration:none;
     font-weight:600;
     transition:.3s;
+	
 }
 
 .btn-primary {
