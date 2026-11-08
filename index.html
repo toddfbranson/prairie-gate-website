@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prairie Gate Leadership</title>
+
+<style>
+     
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/** Form Variables **/
+	
+	:root {
+  --color-highlight: #7ecac7;
+  --color-primary: #23494c;
+  --color-primary-active: #122d30;
+  --color-text-default: #ffffff;
+  --color-text-select: #000000;
+  --color-text-muted: #475569;
+	}
+	button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0 auto;
+  padding: 0;
+  text-align:left;
+}
+
+[type="checkbox"],
+[type="radio"],
+[type="range"] {
+  appearance: none;
+  flex-shrink: 0;
+  padding: 0;
+  user-select: none;
+}
+
+[type="checkbox"]:focus,
+[type="radio"]:focus,
+[type="range"]:focus {
+  outline: none;
+}
+
+/** Components **/
+
+.fs-form {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.fs-form:where(.fs-layout__2-column) {
+  column-gap: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+fieldset {
+  display: flex;
+  margin: 1rem 0;
+  row-gap:10rem;
+}
+
+.fs-form:where(.fs-layout__2-column) fieldset {
+  column-gap: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / -1;
+}
+
+.fs-fieldset-title {
+  color: var(--color-text-default);
+  font-family: var(--font-family-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+  grid-column: 1 / -1;
+}
+
+.fs-field {
+  display: flex;
+  flex-direction: row;
+  row-gap: 0.375rem;
+
+}
+
+.fs-label {
+  color: var(--color-text-default);
+  display: ;block;
+  font-family: var(--font-family-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  
+}
+
+.fs-description {
+  color: var(--color-text-muted);
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.fs-button-group {
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 0.75rem;
+}
+
+.fs-form:where(.fs-layout__2-column) .fs-button-group {
+  grid-column: 1 / -1;
+}
+
+.fs-button {
+  background-color: var(--color-primary);
+  border-radius: 0.375rem;
+  color: white;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1rem;
+  padding: 1rem 2rem;
+  transition-duration: 200ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fs-button:hover {
+  background-color: var(--color-primary-active);
+}
+
+.fs-button:focus-visible {
+  background-color: var(--color-primary-active);
+  outline: 3px solid var(--color-highlight);
+}
+
+.fs-input,
+.fs-select {
+  /*appearance: none;*/
+  border-radius: 0.375rem;
+  border-width: 0;
+  box-shadow: var(--color-border-default) 0 0 0 1px inset;
+  color: var(--color-text-select);
+  font-size: 0.875rem;
+  height: 2rem;
+  line-height: 1.25rem;
+  outline: none;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  width: 40%;
+}
+
+.fs-input:focus-visible,
+.fs-select:focus-visible {
+  box-shadow: var(--color-border-active) 0 0 0 1.5px inset;
+  outline: 3px solid var(--color-highlight);
+  outline-offset: 0;
+}
+
+.fs-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.fs-checkbox-group,
+.fs-radio-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.fs-checkbox-field,
+.fs-radio-field {
+  column-gap: 0.5rem;
+  display: flex;
+}
+
+:is(.fs-checkbox-field, .fs-radio-field) .fs-label + .fs-description {
+  margin-top: 0.125rem;
+}
+
+.fs-checkbox-wrapper,
+.fs-radio-wrapper {
+  align-items: center;
+  display: flex;
+  height: 1.25rem;
+}
+
+.fs-checkbox,
+.fs-radio {
+  background-color: #fff;
+  border: 1px solid var(--color-text-default);
+  height: 1rem;
+  width: 1rem;
+}
+
+.fs-checkbox {
+  border-radius: 0.25rem;
+}
+
+.fs-radio {
+  border-radius: 100%;
+}
+
+.fs-checkbox:checked,
+.fs-radio:checked {
+  background-color: var(--color-primary);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-color: transparent;
+}
+
+.fs-checkbox:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+}
+
+.fs-radio:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+}
+
+.fs-checkbox:focus-visible,
+.fs-radio:focus-visible {
+  outline: 3px solid var(--color-highlight);
+  outline-offset: 0;
+}
+
+.fs-select {
+  background-color: #fff;
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+.fs-slider {
+  background: transparent;
+  cursor: pointer;
+  height: 1.25rem;
+  width: 100%;
+}
+
+.fs-slider::-moz-range-track {
+  background-color: var(--color-background);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+.fs-slider::-webkit-slider-runnable-track {
+  background-color: var(--color-background);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+.fs-slider::-moz-range-thumb {
+  background-color: var(--color-primary);
+  border: none; /* Removes extra border that FF applies */
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.fs-slider::-webkit-slider-thumb {
+  appearance: none;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  height: 1.25rem;
+  margin-top: -0.375rem; /* Centers thumb on the track */
+  width: 1.25rem;
+}
+
+.fs-slider:focus-visible::-moz-range-thumb {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.fs-slider:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.fs-switch {
+  background-color: var(--color-background-alt);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='white'/%3e%3c/svg%3e");
+  background-position: left center;
+  background-repeat: no-repeat;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  height: 1.5rem;
+  transition-duration: 200ms;
+  transition-property: background-color, background-position;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 2.75rem;
+}
+
+.fs-switch:checked {
+  background-color: var(--color-primary);
+  background-position: right center;
+}
+
+.fs-switch:focus-visible {
+  outline: 3px solid var(--color-highlight);
+  outline-offset: 0;
+}
+
+.fs-textarea {
+  appearance: none;
+  border-radius: 0.375rem;
+  border-width: 0;
+  box-shadow: var(--color-border-default) 0 0 0 1px inset;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  outline: none;
+  padding: 0.5rem 0.75rem;
+  resize: vertical;
+}
+
+.fs-textarea:focus-visible {
+  box-shadow: var(--color-border-active) 0 0 0 1.5px inset;
+  outline: 3px solid var(--color-highlight);
+  outline-offset: 0;
+}
+
+.fs-textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/** Utilities **/
+
+.col-span-full {
+  grid-column: 1 / -1;
+}
+
+.fs-textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.slider-label-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.slider-label-text {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  white-space: nowrap;
+}
+	
+/** End Form Variables **/
+
+:root {
+    --prairie-green: #1F4B3A;
+    --warm-copper: #B87333;
+    --sandstone: #DCC9A3;
+    --ivory: #F8F6F2;
+    --charcoal: #2B2B2B;
+}
+
+*,
+::before,
+::after {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    color: var(--charcoal);
+    line-height: 1.6;
+    background:#fff;
+}
+
+.container {
+    width:min(1200px,90%);
+    margin:auto;
+}
+h1 {
+    text-align: center;
+}
+
+h1,h2,h3 {
+    font-family: Arial, serif;
+}
+
+.btn {
+    display:grid;
+    padding:7px 14px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary {
+    background:var(--warm-copper);
+    color:white;
+}
+
+.btn-secondary {
+    border:2px solid white;
+    color:white;
+}
+
+	.btn-external {
+    border:2px solid #B87333;
+    color:white;
+	
+}
+	.btn-wrapper {
+		display:flex;
+		gap: 40px;
+		align-items:flex-start;
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+	.caption-wrapper {
+		display:flex;
+		flex-direction:column;
+		align-content: flex-start;
+	}
+	.btn-caption {
+		text-align:center;
+		margin-top:2px;
+		font-size:0.7rem;
+		color:var(--ivory);
+		font-style: italic;
+	}
+section {
+    padding:90px 0;
+}
+
+.hero {
+    background:
+        linear-gradient(rgba(31,75,58,.55),
+        rgba(31,75,58,.65)),
+        url("images/sunrise-prairie.png");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero-content {
+    max-width:700px;
+}
+
+.hero h1 {
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p {
+    font-size:1.3rem;
+    margin-bottom:35px;
+}
+
+.mission {
+    background:var(--ivory);
+    text-align:center;
+}
+
+.mission p {
+    max-width:850px;
+    margin:auto;
+    font-size:1.2rem;
+}
+
+.pillars {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:30px;
+}
+
+.card {
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    background:white;
+}
+
+.card h3 {
+    color:var(--prairie-green);
+    margin-bottom:10px;
+}
+
+.packages {
+    background:var(--ivory);
+}
+
+.pricing-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.package {
+    background:white;
+    border-radius:15px;
+    padding:40px;
+    text-align:center;
+}
+
+.featured {
+    border:4px solid var(--warm-copper);
+    transform:scale(1.04);
+}
+
+.price {
+    font-size:3rem;
+    color:var(--warm-copper);
+    font-weight:bold;
+}
+
+.founder {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+	.form {
+		display:block;
+		margin: 0 auto;
+	}
+.cta {
+    background:var(--prairie-green);
+    text-align:center;
+    color:white;
+}
+
+footer {
+    background:#F6F1E7;
+    color:var(--charcoal);
+    text-align:center;
+    padding:20px;
+}
+
+	footer a:link {
+		color: var(--charcoal);
+	}
+	footer a:hover {
+		color: var(--warm-copper);
+	}
+	
+	footer a:visited {
+		color: var(--charcoal);
+	}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<img src="images/prairie-gate-horizontal-logo.png"
+     alt="Prairie Gate Leadership"
+     style="max-width:500px; margin-bottom:30px; display:block; margin: 0 auto;">
+
+<h1>Opening the Gate to What's Possible</h1>
+
+<p style="text-align: center">
+Helping leaders, nonprofits, associations,
+and community organizations build
+strong governance, sustainable growth,
+and lasting impact.
+</p>
+
+<div class="btn-wrapper">
+<a href="#contact" class="btn btn-primary">
+Schedule a Consultation
+</a>
+
+<a href="#services" class="btn btn-secondary">
+Explore Services
+</a>
+<div class="caption-wrapper">	
+<a href="https://toddfbranson.myportfolio.com/recent-work" target="new" class="btn btn-external">
+View Portfolio
+</a>
+<span class="btn-caption">Opens new window</span>	
+	</div>
+	</div>
+</div>
+</section>
+
+<!-- MISSION -->
+
+<section class="mission">
+
+<div class="container">
+
+<h2>Our Mission</h2>
+
+<br>
+
+<p>
+Prairie Gate Leadership exists to help organizations and individuals discover what is possible through strong leadership, effective governance, intentional growth, and faithful stewardship.
+</p>
+
+</div>
+
+</section>
+
+<!-- FOUR PILLARS -->
+
+<section>
+
+<div class="container">
+
+<h2 style="text-align:center;margin-bottom:50px;">
+Our Four Pillars
+</h2>
+
+<div class="pillars">
+
+<div class="card">
+<h3>Leadership</h3>
+<p>
+Developing leaders who inspire confidence, create vision, and strengthen organizations.
+</p>
+</div>
+
+<div class="card">
+<h3>Governance</h3>
+<p>
+Board development, bylaws, policies, retreats, and strategic planning.
+</p>
+</div>
+
+<div class="card">
+<h3>Growth</h3>
+<p>
+Membership, fundraising, sponsorships, and capacity building.
+</p>
+</div>
+
+<div class="card">
+<h3>Stewardship</h3>
+<p>
+Operational excellence, financial oversight, and long-term sustainability.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section>
+
+<div class="container">
+
+<h2 id="services" style="text-align:center;margin-bottom:50px;">
+How We Help
+</h2>
+
+<div class="pillars">
+
+<div class="card">
+<h3>Governance &amp; Board Excellence</h3>
+<ul>
+<li>Bylaw Reviews</li>
+<li>Governance Audits</li>
+<li>Board Orientation</li>
+<li>Strategic Planning</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Organizational Growth</h3>
+<ul>
+<li>Membership Growth</li>
+<li>Sponsorship Programs</li>
+<li>Revenue Diversification</li>
+<li>Fundraising Strategy</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Leadership Development</h3>
+<ul>
+<li>Coaching</li>
+<li>Mentoring</li>
+<li>Youth Leadership</li>
+<li>Workshops</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Fractional Support</h3>
+<ul>
+<li>Executive Advisory</li>
+<li>Board Support</li>
+<li>Operational Guidance</li>
+<li>Strategic Partnerships</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PACKAGES -->
+
+<section class="packages">
+
+<div class="container">
+
+<h2 style="text-align:center;margin-bottom:50px;">
+Engagement Packages
+</h2>
+
+<div class="pricing-grid">
+
+<div class="package">
+
+<h3>Prairie Gate Essentials</h3>
+
+<div class="price">$495</div>
+
+<p>/month</p>
+
+<hr><br>
+
+<p>Monthly advisory call</p>
+<p>Email support</p>
+<p>Governance guidance</p>
+
+</div>
+
+<div class="package featured">
+
+<h3>Prairie Gate Growth</h3>
+
+<div class="price">$995</div>
+
+<p>/month</p>
+
+<hr><br>
+
+<p>Two strategy sessions</p>
+<p>Membership guidance</p>
+<p>Governance support</p>
+<p>Financial review</p>
+
+</div>
+
+<div class="package">
+
+<h3>Strategic Partner</h3>
+
+<div class="price">$2500</div>
+
+<p>/month</p>
+
+<hr><br>
+
+<p>Fractional leadership</p>
+<p>Board participation</p>
+<p>Strategic coaching</p>
+<p>Priority support</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOUNDER -->
+
+<section>
+
+<div class="container founder">
+
+<div>
+
+<img src="images/todd-branson.png"
+     alt="Todd Branson"
+     style="width:60%; border-radius:0px;">
+
+</div>
+
+<div>
+
+<h2>Meet Todd Branson</h2>
+
+<br>
+
+<p>
+Todd is an association marketing and operations leader with 15+ years growing membership organizations across the agriculture and equine sectors.Todd has a track record of driving membership growth (+5% in a single year), building corporate sponsorship revenue, scaling youth development programs backed by $1M+ in secured funding, and directing large-scale championship events. His career skillset includes brand strategy, multi-channel campaigns, nonprofit board relations, and fiscal management. Todd has found gold in all demographic sectors including rebuilding rural county programs (1,000%+ budget growth) to relocating an international headquarters. Todd's overarching goal is to help boards and nonprofits focus on their passions while he creates new innovative strategic marketing pathways, reimagines partnership development, and provides guidance to enhance program leadership to all mission-driven agricultural and rural associations.
+</p>
+<br>
+<p><em>"My life goal is to help nonprofits and associations build new collaboration pathways, build new partnerships and supporters, and to watch them celebrate their passions while sharing with others about their organization's mission."</em>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2 style="font-size:3rem;"  id="contact">
+Ready to Open the Gate to What's Possible?
+</h2>
+
+<br>
+
+<p>
+Let's discuss your goals and explore
+how Prairie Gate Leadership can help. <br><em>(*Required Fields)</em>
+</p>
+<br>
+ <div class="form">
+<form action= "https://formspree.io/f/xjyydlya" class="fs-form" method="POST">
+    <input type="hidden" name="subject" value="PGL - Request More Information">
+	
+	<div class="fs-field">
+		<input type="text" name="name" placeholder="*First Name Last Name" required class="fs-input">
+	</div>
+	<div class="fs-field">	
+		<input type="phone" name="phone" placeholder="*Phone (XXX) XXX-XXXX" required class="fs-input">
+	</div>
+	<div class="fs-field">	
+		<input type="email" name="email" placeholder="*Email (you@url.com)" required class="fs-input">
+	</div>
+	<div class="fs-field">
+  <textarea class="fs-textarea" name="message" style="width:500px; height:200px;" required placeholder="*Briefly explain how we can help you." ></textarea></div>
+	<div class="fs-field">	
+	<select class="fs-select" name="support-plans" required>
+		<option value="" selected disabled>*Select Your Support Plan Interest</option>
+		<option value="inquiry">General Questions</option>
+		<option value="essentials">Prairie Gate Essentials</option>
+		<option value="growth">Prairie Gate Growth (Recommended)</option>
+		<option value="partner">Strategic Partner</option>
+	</select>
+	</div>
+		<button class="fs-button" type="submit">Yes, Let's Visit!</button>
+		
+</form>
+</div>	
+	</div>																	 
+</section>
+
+<footer>
+
+<img src="images/pg-monogram.png"
+     alt="Prairie Gate Monogram"
+     style="height:140px;margin-bottom:0px;">
+
+<p style="font-size: 12px;">
+	<em><b>Opening the Gate to What's Possible</b></em>
+	<br>© 2026 Prairie Gate Leadership&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  (806) 341-1008&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="mailto:todd@prairiegateleadership.com">todd@prairiegateleadership.com</a>
+	<br>
+	<a href="https://toddfbranson.myportfolio.com/recent-work" target="new">Portfolio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sample Agreement <a href="documents/Prairie Gate Leadership Service Agreement.docx" target="new">(.docx)</a>&nbsp;&nbsp;<a href="documents/Prairie Gate Leadership Service agreement.pdf" target="new">(.pdf)</a>
+</p>
+
+<br>
+
+</footer>
+
+</body>
+</html>
