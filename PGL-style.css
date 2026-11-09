@@ -580,8 +580,25 @@ section {
 	display: block;
     margin-top: 50px;
 	margin-left: auto;
-	margin-right: autos;
+	margin-right: auto;
 	
+}
+
+.card ul  {
+/*	position: absolute;*/
+    top: 10px;
+  	margin: 40px 0 10px 0;  
+    text-align: left;
+	left: 10px;
+}
+
+.card p  {
+	display: block; /* allows width control */
+	width: calc(100% - 20px); /* 10px on each side */
+	margin: 40px 10px 20px 30px;
+	font-size:.9rem;
+	color:var(--charcoal);  
+    text-align: left;
 }
 
 .card-content{
