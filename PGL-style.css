@@ -441,18 +441,17 @@ h1,h2,h3 {
 	.btn-wrapper {
 		display:flex;
 		gap: 40px;
-		align-items:flex-start;
+		align-items:center;
+		justify-content: center;
 		width: fit-content;
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 40px;
-		margin-bottom:40px;
 		
 	}
 	.caption-wrapper {
-		display:flex;
-		flex-direction:column;
-		align-content: center;
+		display: block;
+    	margin-top: 10px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -465,8 +464,9 @@ h1,h2,h3 {
 	}
 
 .btn-caption2 {
-		align-items:center;
-		margin-top:2px;
+		display: block; /* allows width control */
+		width: calc(100% - 20px); /* 10px on each side */
+		margin: 5px 10px 20px 10px;
 		font-size:0.7rem;
 		color:var(--charcoal);
 		font-style: italic;
@@ -551,60 +551,42 @@ section {
 
 .work-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
     gap:40px;
 }
 
 .card {
-    display:flex;
-	flex-direction: column;
+    position:relative;
+	display: flex;
+    flex-direction: column;
+    align-items: center; 
 	background:white;
     border-radius:12px;
-	align-items: center;
-	text-align:center;
-    overflow:hidden;
+	overflow:hidden;
     box-shadow:0 4px 12px rgba(0,0,0,.08);
-	margin-left:auto;
-	margin-right:auto;
-	padding: 10px;
-	margin-top:20px;
+	margin: 20px 0 20px 20px;
+    text-align: center;
+    line-height: 1;
 }
 .card h3 {
     color:var(--prairie-green);
-    margin-bottom:10px;
+    position: absolute;
+    top: 10px;
+  	margin: 5px 0 10px 0; /* top right bottom left */
+    text-align: center;
 }
 .card img{
-    width:60%;
-	margin:20px;
-}
-
-.card2 {
-    display:flex;
-	flex-direction: column;
-	background:white;
-    border-radius:12px;
-	align-items: center;
-	text-align:center;
-    overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-	margin-left:auto;
-	margin-right:auto;
-	padding:10px;
-	margin-top:20px;
-}
-
-.card2 img {
     width:80%;
-	margin:10px;
-}
-
-.card2 h3{
-    padding:10px;
-    color:var(--prairie-green);
+	display: block;
+    margin-top: 50px;
+	margin-left: auto;
+	margin-right: autos;
+	
 }
 
 .card-content{
-    padding:10px;
+    align-items:center;
+	margin-bottom:20px;
 }
 
 .gallery{
